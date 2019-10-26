@@ -1,6 +1,12 @@
-# NoteitNgApp
+# NoteitNgApp - Angular FrontEnd
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
+Application of notes.
+<p>Allows user to create notes in notebooks.
+<p>Allow Create/ update/ delete notes and notebooks
+<p>Allow users to filter notes
+<p>Allow users send feedbacks by email
+
 
 ## Development server
 
