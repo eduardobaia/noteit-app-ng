@@ -40,9 +40,9 @@ const appRoutes :Routes = [
     NotesComponent,
     NotfoundComponent
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
-    httpClientModule,
+    HttpClientModule,
     FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes,{enableTracing:true})
