@@ -19,6 +19,10 @@ export class FeedbackComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  sendFeedback(): void{
+     alert(this.model.name);
+  }
 }
 
 export interface FeedBackViewModel{
