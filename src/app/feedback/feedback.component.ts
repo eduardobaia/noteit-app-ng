@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,7 +15,7 @@ export class FeedbackComponent implements OnInit {
     feedback:''
   };
 
-  constructor() { }
+  constructor(private http: HttpClientModule) { }
 
   ngOnInit() {
   }
