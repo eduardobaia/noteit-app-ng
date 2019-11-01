@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-feedback',
@@ -15,15 +16,14 @@ export class FeedbackComponent implements OnInit {
     feedback:''
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(private apiservice: ApiService) { }
 
   ngOnInit() {
   }
 
 
   sendFeedback(): void{
-    let url = "http://localhost:8082/api/feedback";
-     this.http.post(url, this.model).subscribe(
+     this.apiservice.postFeedback(this.model).subscribe(
        res => {
          //reload page when sucess
          location.reload();
@@ -32,7 +32,7 @@ export class FeedbackComponent implements OnInit {
          alert("An error has occurred while sending feedback");
        }
      );
-  }
+  }  
 }
 
 export interface FeedBackViewModel{
