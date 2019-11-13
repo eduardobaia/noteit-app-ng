@@ -90,7 +90,7 @@ export class NotesComponent implements OnInit {
 
   deleteNote(note: Note){
     if(confirm("Are you sure you want to delete this note?")){
-      this.apiservice.deleteNotebook(note.id).subscribe(
+      this.apiservice.deleteNote(note.id).subscribe(
         res => {
           let indexOfNote = this.notes.indexOf(note);
           this.notes.splice(indexOfNote, 1);

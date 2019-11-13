@@ -57,7 +57,9 @@
       <div class="row">
         <!-- Note list -->
         <app-note *ngFor="let n of notes "
-                  [note]="n" (updatedNote)="updateNote($event)">
+                  [note]="n" 
+                  (updatedNote)="updateNote($event)" 
+                  (deletedNote)="deleteNote($event)"> 
         </app-note>
       </div>
     </div>
